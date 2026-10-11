@@ -1,0 +1,56 @@
+# 빨간망토 차차 SFC 한글패치
+
+슈퍼패미컴용 **Akazukin Cha Cha 일본판**을 한국어로 즐길 수 있는 비공식 팬 패치입니다. **v1.0.0**
+
+**[한글패치 다운로드](https://github.com/enthhende/chacha-sfc-korean-patch/releases/tag/v1.0.0) · [패치 안내](https://enthhende.github.io/games/chacha/patch/) · [한국어 공략](https://enthhende.github.io/games/chacha/guide/)**
+
+이야기 대사, 타이틀, 세이브 메뉴와 슬롯, 전투·소지품·상태 메뉴, 기술·아이템 이름과 설명을 한국어로 바꿨습니다.
+
+## 다운로드와 패치 적용
+
+1. 위의 릴리즈에서 **chacha-sfc-korean-patch-v1.0.0.zip**을 내려받아 압축을 풉니다.
+2. 아래 표와 크기·SHA-256이 일치하는 **헤더 없는 일본판 원본**을 준비합니다.
+3. 압축을 푼 폴더에서 Python 3.9 이상으로 동봉된 적용 도구를 실행합니다. 별도 Python 패키지는 필요하지 않습니다.
+
+```sh
+python3 scripts/apply_patch.py --rom "원본파일.smc" --output "빨간망토 차차 한글판.sfc"
+```
+
+Windows에서 Python 명령이 `python`이면 `python3` 대신 사용하세요. `원본파일.smc`는 자신의 파일 이름이나 경로로 바꿉니다. 출력은 기존에 없는 새 파일 이름을 지정하세요.
+
+4. 만들어진 `.sfc` 파일을 에뮬레이터에서 엽니다. 패치 적용 도구는 원본·패치·완성 ROM의 크기와 SHA-256을 확인합니다.
+
+BPS 적용 프로그램을 사용하는 분은 `patches/chacha-sfc-korean-patch-v1.0.0.bps`를 같은 원본에 적용해도 됩니다.
+
+## 지원 원본과 해시
+
+| 파일 | 크기 | SHA-256 |
+|---|---:|---|
+| 일본판 원본 · copier header 없음 | 1,572,864바이트 | `f5e41c877ed95a66e171735dbf99f86fd972e6dd7687379ed550baa45cf08151` |
+| 한글패치 BPS | 424,773바이트 | `8fc0e0980967acd31f54562f8786fc41b5c1fad028a42f78860774364a29465f` |
+| 패치 후 한글판 ROM | 2,097,152바이트 | `a8edfb9b3df082783111ad0072f4dabb1ec400fb782e85ade666213203c3a8ee` |
+
+다른 리비전, 512바이트 헤더가 붙은 파일, 이미 수정된 ROM에는 적용할 수 없습니다. 배포 ZIP·BPS의 해시는 릴리즈의 `SHA256SUMS.txt`, 압축 안 파일의 해시는 `SHA256SUMS`에서 확인할 수 있습니다.
+
+## 플레이와 저장
+
+- **슈퍼패미컴 실기에서는 확인하지 않았습니다.**
+- 에뮬레이터는 Mesen Community Edition 2.2.1을 사용할 수 있습니다.
+- 기존 저장파일은 먼저 백업하세요. 일반 저장(SRAM)은 새 ROM 파일 이름에 맞춰 에뮬레이터의 저장 폴더에 연결합니다.
+- 다른 패치 버전이나 일본판에서 만든 강제저장·세이브스테이트는 사용하지 마세요. 새 게임 또는 일반 저장으로 시작하세요.
+
+## 공략과 오류 제보
+
+[한국어 공략](https://enthhende.github.io/games/chacha/guide/)에서 1~8화 진행과 기술·아이템을 찾아볼 수 있습니다. 공략의 [한글패치 배포란](https://enthhende.github.io/games/chacha/patch/)에서도 다운로드와 적용법을 확인할 수 있습니다.
+
+문제가 있으면 [오류 제보](https://github.com/enthhende/chacha-sfc-korean-patch/issues)에 패치 버전, 에뮬레이터 이름·버전, 재현 순서와 화면을 남겨주세요. ROM 파일은 첨부하지 마세요.
+
+## 제작·글꼴·재배포
+
+- 번역·식자: **러브델릭(엔스헨데)**
+- 글꼴: **DOSSaemmul / DOSPilgi** — leedheo, **Dalmoori(달무리)** — RanolP.
+- 글꼴 출처와 표시용 수정 내역은 [CREDITS](CREDITS.md), 라이선스 고지는 [LICENSES](LICENSES/)와 [LICENSING](LICENSING.md)에 있습니다.
+
+패치는 **출처와 버전을 표시하면 재배포할 수 있습니다.** 최신 버전과 적용 안내를 받을 수 있도록 **공식 배포 주소 공유를 권장합니다.**
+
+게임 ROM은 배포물에 포함하지 않습니다. 게임과 캐릭터의 권리는 각 권리자에게 있으며 이 패치는 공식 제작사와 관계없는 팬 작업입니다.

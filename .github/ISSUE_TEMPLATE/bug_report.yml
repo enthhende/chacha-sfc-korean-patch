@@ -1,0 +1,31 @@
+name: 오류 제보
+description: 표시·대사·진행 문제를 재현 순서와 함께 알려주세요.
+title: "[오류] "
+body:
+  - type: markdown
+    attributes:
+      value: "ROM 파일은 첨부하지 마세요. 패치 버전·에뮬레이터·재현 순서와 화면을 보내주세요."
+  - type: input
+    id: patch_version
+    attributes:
+      label: 패치 버전
+      placeholder: v1.0.0
+    validations:
+      required: true
+  - type: input
+    id: emulator
+    attributes:
+      label: 에뮬레이터 이름과 버전 / 운영체제
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 순서와 실제 현상
+      description: 몇 화·어느 장소·어떤 메뉴나 대사에서 발생하는지 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대한 동작과 화면

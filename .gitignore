@@ -1,0 +1,24 @@
+# Source/output ROMs, saves and local evidence
+*.sfc
+*.smc
+*.srm
+*.sav
+*.mss
+*.state
+*.state[0-9]*
+*.bin
+*.chr
+*.tilemap
+outputs/
+originals/
+private/
+work/
+__pycache__/
+*.py[cod]
+.DS_Store
+._*
+*.log
+*.zip
+*.7z
+.chacha-patch-*
+.*.chacha-lock
