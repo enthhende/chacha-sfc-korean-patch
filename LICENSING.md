@@ -8,7 +8,7 @@
 
 ## 적용 도구와 글꼴
 
-`scripts/apply_patch.py`와 도구 문서의 기존 MIT 고지는 [LICENSE](LICENSE)에 있습니다. 루트 MIT는 적용 도구 소스의 라이선스입니다.
+`apply-patch.html`의 브라우저 적용 코드, `apply-patch.bat`, `scripts/apply_patch.py`와 도구 문서의 MIT 고지는 [LICENSE](LICENSE)에 있습니다. 루트 MIT는 적용 도구 소스의 라이선스입니다.
 
 - DOSSaemmul / DOSPilgi: [MIT 고지](LICENSES/leedheo-MIT.txt).
 - Dalmoori(달무리): [Apache-2.0 고지](LICENSES/dalmoori-Apache-2.0.txt).

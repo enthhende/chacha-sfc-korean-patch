@@ -6,21 +6,48 @@
 
 이야기 대사, 타이틀, 세이브 메뉴와 슬롯, 전투·소지품·상태 메뉴, 기술·아이템 이름과 설명을 한국어로 바꿨습니다.
 
-## 다운로드와 패치 적용
+## 가장 간단한 적용법 — 설치 없이 브라우저에서
 
-1. 위의 릴리즈에서 **chacha-sfc-korean-patch-v1.0.0.zip**을 내려받아 압축을 풉니다.
-2. 아래 표와 크기·SHA-256이 일치하는 **헤더 없는 일본판 원본**을 준비합니다.
-3. 압축을 푼 폴더에서 Python 3.9 이상으로 동봉된 적용 도구를 실행합니다. 별도 Python 패키지는 필요하지 않습니다.
+1. **[브라우저 패치 적용](https://enthhende.github.io/games/chacha/patch/apply/)**을 엽니다.
+2. 헤더 없는 일본판 원본 `.sfc` 또는 `.smc` 파일을 선택합니다.
+3. **한글 ROM 만들기 → 한글 ROM 저장**을 누릅니다.
+4. 내려받은 `.sfc` 파일을 에뮬레이터에서 엽니다.
+
+Windows·macOS·Linux에서 사용할 수 있으며 Python 설치나 명령어 입력이 필요 없습니다. ROM은 브라우저 안에서만 처리되고 서버로 전송되지 않습니다. 원본·패치·완성 ROM의 크기와 SHA-256을 자동 확인합니다.
+
+## 오프라인 적용 — Windows 배치 파일 / macOS
+
+릴리즈에서 **[chacha-sfc-korean-patch-v1.0.0-easy.zip](https://github.com/enthhende/chacha-sfc-korean-patch/releases/download/v1.0.0/chacha-sfc-korean-patch-v1.0.0-easy.zip)**을 받아 압축을 풉니다.
+
+- **Windows:** `apply-patch.bat`을 더블클릭합니다. 브라우저 적용 화면이 열리면 원본 ROM을 선택하고 **한글 ROM 만들기 → 한글 ROM 저장**을 누릅니다. PowerShell 명령이나 Python 설치는 필요 없습니다.
+- **macOS·Linux:** `apply-patch.html`을 브라우저에서 열고 같은 순서로 진행합니다. HTML 파일이 편집기로 열리면 ‘연결 프로그램’에서 브라우저를 선택하세요.
+
+패치가 HTML 안에 들어 있어 압축을 푼 뒤에는 인터넷 연결 없이 적용할 수 있습니다. 파일을 브라우저 화면의 선택 상자에 끌어다 놓아도 됩니다.
+
+## BPS / xdelta 프로그램으로 적용
+
+SFC ROM에도 xdelta 패치를 적용할 수 있습니다. ZIP의 `patches/`에는 **BPS와 xdelta** 두 형식을 넣었습니다. 원하는 형식 하나만 일본판 원본에 적용하세요.
+
+패치 프로그램에서 **원본 ROM → `.bps` 또는 `.xdelta` 패치 → 새 출력 `.sfc` 파일**을 지정합니다. 같은 원본에 두 패치를 차례로 적용하지 마세요. 둘 다 아래 표의 동일한 한글판을 만듭니다.
+
+<details>
+<summary>명령줄 적용법 (선택 사항)</summary>
+
+xdelta3:
+
+```sh
+xdelta3 -d -s "원본파일.smc" "patches/chacha-sfc-korean-patch-v1.0.0.xdelta" "빨간망토 차차 한글판.sfc"
+```
+
+Python 3.9 이상 (동봉된 BPS 적용 도구):
 
 ```sh
 python3 scripts/apply_patch.py --rom "원본파일.smc" --output "빨간망토 차차 한글판.sfc"
 ```
 
-Windows에서 Python 명령이 `python`이면 `python3` 대신 사용하세요. `원본파일.smc`는 자신의 파일 이름이나 경로로 바꿉니다. 출력은 기존에 없는 새 파일 이름을 지정하세요.
+파일 이름은 자신의 경로에 맞게 바꾸고, 출력에는 새 파일 이름을 지정하세요.
 
-4. 만들어진 `.sfc` 파일을 에뮬레이터에서 엽니다. 패치 적용 도구는 원본·패치·완성 ROM의 크기와 SHA-256을 확인합니다.
-
-BPS 적용 프로그램을 사용하는 분은 `patches/chacha-sfc-korean-patch-v1.0.0.bps`를 같은 원본에 적용해도 됩니다.
+</details>
 
 ## 지원 원본과 해시
 
@@ -28,9 +55,10 @@ BPS 적용 프로그램을 사용하는 분은 `patches/chacha-sfc-korean-patch-
 |---|---:|---|
 | 일본판 원본 · copier header 없음 | 1,572,864바이트 | `f5e41c877ed95a66e171735dbf99f86fd972e6dd7687379ed550baa45cf08151` |
 | 한글패치 BPS | 424,773바이트 | `8fc0e0980967acd31f54562f8786fc41b5c1fad028a42f78860774364a29465f` |
+| 한글패치 xdelta | 406,548바이트 | `02828bc86e06ab3d2a82faf05b29363f72b74292cd638c89b4d43502242450dc` |
 | 패치 후 한글판 ROM | 2,097,152바이트 | `a8edfb9b3df082783111ad0072f4dabb1ec400fb782e85ade666213203c3a8ee` |
 
-다른 리비전, 512바이트 헤더가 붙은 파일, 이미 수정된 ROM에는 적용할 수 없습니다. 배포 ZIP·BPS의 해시는 릴리즈의 `SHA256SUMS.txt`, 압축 안 파일의 해시는 `SHA256SUMS`에서 확인할 수 있습니다.
+다른 리비전, 512바이트 헤더가 붙은 파일, 이미 수정된 ROM에는 적용할 수 없습니다. 배포 ZIP·BPS·xdelta의 해시는 릴리즈의 `SHA256SUMS.txt`, 압축 안 파일의 해시는 `SHA256SUMS`에서 확인할 수 있습니다.
 
 ## 플레이와 저장
 

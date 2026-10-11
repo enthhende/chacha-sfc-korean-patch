@@ -4,20 +4,23 @@
 
 **[한국어 공략](https://enthhende.github.io/games/chacha/guide/) · [패치 안내](https://enthhende.github.io/games/chacha/patch/)**
 
-## 다운로드
+## 간단한 적용법
 
-`chacha-sfc-korean-patch-v1.0.0.zip`을 내려받아 압축을 풉니다. BPS 패치, 적용 도구, 사용법과 글꼴 라이선스 고지가 들어 있습니다.
+**[브라우저에서 한글패치 적용](https://enthhende.github.io/games/chacha/patch/apply/)** → 일본판 원본 선택 → **한글 ROM 만들기 → 한글 ROM 저장**. Windows·macOS·Linux에서 설치나 명령어 입력 없이 사용할 수 있습니다. ROM은 브라우저 안에서만 처리되며 서버로 전송되지 않습니다.
 
-헤더 없는 일본판 원본에 동봉 도구로 적용하세요. Python 3.9 이상이 필요합니다.
+오프라인으로 쓰려면 **[chacha-sfc-korean-patch-v1.0.0-easy.zip](https://github.com/enthhende/chacha-sfc-korean-patch/releases/download/v1.0.0/chacha-sfc-korean-patch-v1.0.0-easy.zip)**을 받아 압축을 풉니다.
 
-```sh
-python3 scripts/apply_patch.py --rom "원본파일.smc" --output "빨간망토 차차 한글판.sfc"
-```
+- **Windows:** `apply-patch.bat` 더블클릭 후 화면에서 원본을 선택합니다. PowerShell 명령이나 Python 설치는 필요 없습니다.
+- **macOS·Linux:** `apply-patch.html`을 브라우저로 엽니다.
+- BPS·xdelta 적용 프로그램을 쓰는 분은 `patches/`에서 한 형식만 골라 일본판 원본에 적용하세요. **xdelta도 SFC에 사용할 수 있습니다.**
+
+두 패치 형식과 브라우저 적용 도구는 동일한 v1.0.0 한글 ROM을 만듭니다. 기존 BPS 파일과 게임 내용은 그대로입니다. `chacha-sfc-korean-patch-v1.0.0.zip`은 기존 BPS·Python 도구 패키지이며, 처음 받는 분은 **easy.zip**을 사용하세요.
 
 | 파일 | 크기 | SHA-256 |
 |---|---:|---|
 | 일본판 원본 | 1,572,864바이트 | `f5e41c877ed95a66e171735dbf99f86fd972e6dd7687379ed550baa45cf08151` |
 | BPS 패치 | 424,773바이트 | `8fc0e0980967acd31f54562f8786fc41b5c1fad028a42f78860774364a29465f` |
+| xdelta 패치 | 406,548바이트 | `02828bc86e06ab3d2a82faf05b29363f72b74292cd638c89b4d43502242450dc` |
 | 패치 후 ROM | 2,097,152바이트 | `a8edfb9b3df082783111ad0072f4dabb1ec400fb782e85ade666213203c3a8ee` |
 
 - **슈퍼패미컴 실기에서는 확인하지 않았습니다.**

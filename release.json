@@ -22,7 +22,16 @@
     "release": "https://github.com/enthhende/chacha-sfc-korean-patch/releases/tag/v1.0.0",
     "guide": "https://enthhende.github.io/games/chacha/guide/",
     "patch_page": "https://enthhende.github.io/games/chacha/patch/",
-    "issues": "https://github.com/enthhende/chacha-sfc-korean-patch/issues"
+    "issues": "https://github.com/enthhende/chacha-sfc-korean-patch/issues",
+    "browser_patcher": "https://enthhende.github.io/games/chacha/patch/apply/"
   },
-  "credits": "러브델릭(엔스헨데)"
+  "credits": "러브델릭(엔스헨데)",
+  "alternative_patches": [
+    {
+      "file": "patches/chacha-sfc-korean-patch-v1.0.0.xdelta",
+      "format": "VCDIFF",
+      "size": 406548,
+      "sha256": "02828bc86e06ab3d2a82faf05b29363f72b74292cd638c89b4d43502242450dc"
+    }
+  ]
 }

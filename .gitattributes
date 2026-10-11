@@ -1,2 +1,4 @@
 * text=auto eol=lf
 *.bps binary
+*.xdelta binary
+*.bat -text
