@@ -8,7 +8,7 @@
 
 ## 가장 간단한 적용법 — 설치 없이 브라우저에서
 
-1. **[브라우저 패치 적용](https://enthhende.github.io/games/chacha/patch/apply/)**을 엽니다.
+1. **[다운로드 페이지에서 바로 적용](https://enthhende.github.io/games/chacha/patch/#browser-patch)**을 엽니다.
 2. 헤더 없는 일본판 원본 `.sfc` 또는 `.smc` 파일을 선택합니다.
 3. **한글 ROM 만들기 → 한글 ROM 저장**을 누릅니다.
 4. 내려받은 `.sfc` 파일을 에뮬레이터에서 엽니다.
@@ -54,9 +54,9 @@ python3 scripts/apply_patch.py --rom "원본파일.smc" --output "빨간망토 �
 | 파일 | 크기 | SHA-256 |
 |---|---:|---|
 | 일본판 원본 · copier header 없음 | 1,572,864바이트 | `f5e41c877ed95a66e171735dbf99f86fd972e6dd7687379ed550baa45cf08151` |
-| 한글패치 BPS | 424,773바이트 | `8fc0e0980967acd31f54562f8786fc41b5c1fad028a42f78860774364a29465f` |
-| 한글패치 xdelta | 406,548바이트 | `02828bc86e06ab3d2a82faf05b29363f72b74292cd638c89b4d43502242450dc` |
-| 패치 후 한글판 ROM | 2,097,152바이트 | `a8edfb9b3df082783111ad0072f4dabb1ec400fb782e85ade666213203c3a8ee` |
+| 한글패치 BPS | 426,498바이트 | `cf08f012ad7ee9282762b8c7105c18b263ed4bef6e295c36ee58a6134cce6232` |
+| 한글패치 xdelta | 409,389바이트 | `658f3a47a3b45e61a0350561e36b5aac062ea7b6dbb9a810d9ea1fe2e8f4a9f5` |
+| 패치 후 한글판 ROM | 2,097,152바이트 | `fa31c546ea8ed8852f783fcb68d317c77a0316eac2c950d1de1561533819e8df` |
 
 다른 리비전, 512바이트 헤더가 붙은 파일, 이미 수정된 ROM에는 적용할 수 없습니다. 배포 ZIP·BPS·xdelta의 해시는 릴리즈의 `SHA256SUMS.txt`, 압축 안 파일의 해시는 `SHA256SUMS`에서 확인할 수 있습니다.
 

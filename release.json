@@ -10,28 +10,29 @@
   },
   "target": {
     "size": 2097152,
-    "sha256": "a8edfb9b3df082783111ad0072f4dabb1ec400fb782e85ade666213203c3a8ee"
+    "sha256": "fa31c546ea8ed8852f783fcb68d317c77a0316eac2c950d1de1561533819e8df"
   },
   "patch": {
     "file": "patches/chacha-sfc-korean-patch-v1.0.0.bps",
     "format": "BPS1",
-    "size": 424773,
-    "sha256": "8fc0e0980967acd31f54562f8786fc41b5c1fad028a42f78860774364a29465f"
+    "size": 426498,
+    "sha256": "cf08f012ad7ee9282762b8c7105c18b263ed4bef6e295c36ee58a6134cce6232"
   },
   "links": {
     "release": "https://github.com/enthhende/chacha-sfc-korean-patch/releases/tag/v1.0.0",
     "guide": "https://enthhende.github.io/games/chacha/guide/",
     "patch_page": "https://enthhende.github.io/games/chacha/patch/",
     "issues": "https://github.com/enthhende/chacha-sfc-korean-patch/issues",
-    "browser_patcher": "https://enthhende.github.io/games/chacha/patch/apply/"
+    "browser_patcher": "https://enthhende.github.io/games/chacha/patch/#browser-patch"
   },
   "credits": "러브델릭(엔스헨데)",
   "alternative_patches": [
     {
       "file": "patches/chacha-sfc-korean-patch-v1.0.0.xdelta",
       "format": "VCDIFF",
-      "size": 406548,
-      "sha256": "02828bc86e06ab3d2a82faf05b29363f72b74292cd638c89b4d43502242450dc"
+      "size": 409389,
+      "sha256": "658f3a47a3b45e61a0350561e36b5aac062ea7b6dbb9a810d9ea1fe2e8f4a9f5"
     }
-  ]
+  ],
+  "content_revision": "r21"
 }
